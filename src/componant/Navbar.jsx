@@ -3,7 +3,6 @@ import assets from "../assets/imges";
 import { navlinks } from "../content";
 import styles from "../style";
 import Mobilmenu from "./Mobilmenu";
-import Inbutton from "./Inbutton";
 import React, { useRef } from "react";
 
 
@@ -65,8 +64,8 @@ const Navbar = () => {
         </ul>
         <div className="inline-flex gap-4 pl-6 border-l border-Gray_100 border-solid">
           <div className="inline-flex gap-4">
-            <a target="_blank"  className = {`p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://github.com/ess-maker"><img src={assets.github} alt="github" className="w-6 h-6" /></a>
-        <a target="_blank"  className = {`p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://www.linkedin.com/"><img src={assets.linkedin} alt="linkedin" className="w-6 h-6" /></a>
+            <a target="_blank"  className = {`p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://github.com/ess-maker"><img src={assets.github} alt="github" className="w-4 h-4" /></a>
+        <a target="_blank"  className = {`p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://www.linkedin.com/"><img src={assets.linkedin} alt="linkedin" className="w-4 h-4" /></a>
           </div>
         </div>
       </div>
