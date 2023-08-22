@@ -3,7 +3,7 @@
   <img src="src/assets/Portfolio.png" alt="Flower Delivery Website Preview">
 </p>
 
-here is live [here](https://64e22ee4b6215b71ed6dfca6--friendly-meerkat-ca3595.netlify.app/)
+here is live [here](https://main--graceful-lebkuchen-5115c5.netlify.app/)
 ## Description
 
 This repository contains my personal portfolio, which serves as a showcase for my projects, skills, and achievements. The portfolio is designed to provide an overview of my professional background and expertise.
