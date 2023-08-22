@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../style';
 import Inbutton from './Inbutton';
-import Projects from './Projects';
 import assets from '../assets/imges';
 
 const Hero = () => {
@@ -38,7 +37,7 @@ const Hero = () => {
             who is always eager to explore and adopt new technologies.
           </p>
           <div className="inline-flex gap-4">
-            <Inbutton link={assets.Resume} name="Download CV" />
+            <Inbutton name="Download CV" link = "https://drive.google.com/file/d/1A5tsg93izn74zc3KvP9b_3JFskgFTqrc/view?usp=sharing" />
             <Inbutton name="See My Project" onClick={handleProjectClick} styles = "!bg-transparent !text-xl !font-bold !text-Gray_Dark_Default underline" />
           </div>
         </div>
