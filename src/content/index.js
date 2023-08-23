@@ -29,50 +29,52 @@ export const skills = [
     id: 1,
     img:assets.html,
     titel: "html",
-    color:'#E34F26'
   },
   {
     id: 2,
     img:assets.css,
     titel: "css",
-    color:"#264de4"
 
   },
   {
     id: 3,
     img:assets.javscript,
-    color:"#f7df1e",
     titel: "javscript",
   },
   {
     id: 4,
     img:assets.react,
     titel: "React",
-    color:"#61dafb"
-  },
-  {
-    id: 8,
-    img:assets.github,
-    titel: "github",
-    color:"#181717"
   },
   {
   id: 5,
   img:assets.tailwindcss,
   titel: "Tailwindcss",
-  color:"#06B6D4"
 },
 {
   id: 6,
   img:assets.redux_tolkit,
   titel: "redux-tolkit",
-  color:"#764ABC"
 },
 {
   id: 7,
+  img:assets.sass,
+  titel: "Sass/Scss",
+},
+{
+  id: 8,
+  img:assets.typescript,
+  titel: "Typescript",
+},
+{
+  id: 9,
   img:assets.git,
   titel: "git",
-  color:"#F05032"
+},
+{
+  id: 10,
+  img:assets.github,
+  titel: "github",
 },
 ]
 

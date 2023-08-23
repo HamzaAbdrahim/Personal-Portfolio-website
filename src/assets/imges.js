@@ -20,9 +20,9 @@ import mail from "./mail.svg"
 import call from "./call.svg"
 import scooter from "./scooter.png"
 import flower from "./flower.png"
-import Resume from "./Resume.pdf"
-
 import Picture from "./Picture.png"
+import sass from "./sass.svg"
+import typescript from "./typescript.svg"
 
 
 
@@ -53,7 +53,8 @@ call,
 Pictwo,
 scooter,
 flower,
-Resume
+sass,
+typescript
    
 }
 export default assets;
