@@ -20,7 +20,7 @@ const Hero = () => {
     <>
       <div
       id='home'
-        className={`${styles.flexBetween} px-14 py-10 lg:py-24 lg:px-20 flex-col gap-20 lg:flex-row`}
+        className={`${styles.flexBetween} px-14 py-10 lg:py-24 lg:px-20 flex-col-reverse gap-20 lg:flex-row`}
         style={{
           opacity: isLoaded ? 1 : 0,
           transform: `translateY(${isLoaded ? '0' : '20px'})`,
@@ -37,15 +37,15 @@ const Hero = () => {
             who is always eager to explore and adopt new technologies.
           </p>
           <div className="inline-flex gap-4">
-            <Inbutton name="Download CV" link = "https://drive.google.com/file/d/1A5tsg93izn74zc3KvP9b_3JFskgFTqrc/view?usp=sharing" />
+            <Inbutton name="Download CV" link = "https://drive.google.com/file/d/1ZfA5gh7GCLCcf6Oll-k_6fuSBO4ndWuo/view?usp=sharing" />
             <Inbutton name="See My Project" onClick={handleProjectClick} styles = "!bg-transparent !text-xl !font-bold !text-Gray_Dark_Default underline" />
           </div>
         </div>
-        <div className="w-72 h-80 bg-[#E5E7EB] relative">
+        <div className="w-72 h-80  bg-[#E5E7EB] relative">
           <img
             src={assets.Pic}
             alt="myimg"
-            className="absolute right-10 w-[18rem] object-cover h-80 bottom-10"
+            className="absolute hover:right-0 hover:bottom-0 duration-500 cursor-pointer ease-linear  right-10 w-[18rem] object-cover h-80 bottom-10"
             onLoad={() => setIsLoaded(true)}
           />
         </div>

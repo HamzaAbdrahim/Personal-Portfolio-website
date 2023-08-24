@@ -87,18 +87,18 @@ export const projects = [
     img:assets.flower,
   },
   {
+    titel: "Dessert Store",
+  discrption: "Build a website for a dessert store that showcase the desserts they sell. Include a login and signup page and handle validation on the front end. ",
+    live:"https://storedessert.netlify.app/",
+    githublink:"https://github.com/ess-maker/Desseret_store",
+    img:assets.Picture,
+  },
+  {
     titel: "E-scooter",
     discrption: "For our scooter landing page, we've designed a sleek and modern website using React and Tailwind CSS. Users can explore our range of scooters, ensuring that visitors can quickly find the perfect scooter for their needs.",
     live:"https://64dfa5ef29e9b632b42d18ab--grand-truffle-0ee0d0.netlify.app/",
     githublink:"https://github.com/ess-maker/E_Scooter",
     img:assets.scooter,
-  },
-  {
-    titel: "Dashbord",
-  discrption: "Our responsive website is built using HTML and CSS,With responsive design elements and Grid layout, users can easily interact with content, and access all features of the website regardless of the device they are using.",
-    live:"https://ess-maker.github.io/dashbord/",
-    githublink:"https://github.com/ess-maker/dashbord",
-    img:assets.Picture,
   },
 
 ]

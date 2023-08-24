@@ -20,7 +20,7 @@ const About = () => {
       <h1 className={`${styles.heading3} px-5 py-1.5 !text-[1.400rem] bg-[#E5E7EB] rounded-xl mb-4 w-fit mx-auto text-Gray_600`}>About me</h1>
       <div className="grid grid-cols-1 items-center justify-center lg:grid-cols-2">
         <div className="max-w-[25rem] my-10 lg:mb-0 mx-auto md:m-0  md:h-[30rem] bg-[#E5E7EB] relative">
-          <img src={assets.Pictwo} alt="myimg" className="md:absolute left-0 md:left-10 top-0 md:top-10" />
+          <img src={assets.Pictwo} alt="myimg" className="md:absolute hover:left-0 hover:top-0 duration-500 cursor-pointer ease-linear left-0 md:left-10 top-0 md:top-10" />
         </div>
         <div className="text-center lg:text-left 2xl:mx-auto">
           <h1 className={`${styles.heading3} mb-6`}>Curious about me? Here you have it:</h1>
