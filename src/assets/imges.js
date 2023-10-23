@@ -23,6 +23,8 @@ import flower from "./flower.png"
 import Picture from "./Picture.png"
 import sass from "./sass.svg"
 import typescript from "./typescript.svg"
+import main_img from "./main_img.png"
+
 
 
 
@@ -54,7 +56,7 @@ Pictwo,
 scooter,
 flower,
 sass,
-typescript
-   
+typescript,
+main_img
 }
 export default assets;

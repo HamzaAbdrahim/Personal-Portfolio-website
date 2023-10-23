@@ -80,11 +80,20 @@ export const skills = [
 
 export const projects = [
   {
+    titel: "Clothes Shopping Website",
+    discrption: "lothes Shopping Website is user-friendly platform that offers an online shopping experience for fashion enthusiasts.",
+    live:"https://ecommerchijab.netlify.app/",
+    githublink:"https://github.com/ess-maker/Clothes-Shopping-Website",
+    img:assets.main_img,
+    tech_work_with:["Scss" ,"React" , "Typescript" , "Axois" , 'ReduxTolkit']
+  },
+  {
     titel: "Flower Delivery",
     discrption: "Our flower delivery website uses React, Tailwind CSS, and the Context API for seamless browsing, customization, and secure ordering of a wide variety of flowers. With social media integration and excellent customer support, we make celebrating special moments with beautiful flowers effortless.",
     live:"https://64e1c0c6a489b63f3d34cf2f--lustrous-nougat-51ca11.netlify.app/",
     githublink:"https://github.com/ess-maker/Flower-Delivery-website-",
     img:assets.flower,
+    tech_work_with:["Tailwend" ,"React" , "Git" , 'Figma' ]
   },
   {
     titel: "Dessert Store",
@@ -92,14 +101,6 @@ export const projects = [
     live:"https://storedessert.netlify.app/",
     githublink:"https://github.com/ess-maker/Desseret_store",
     img:assets.Picture,
-  },
-  {
-    titel: "E-scooter",
-    discrption: "For our scooter landing page, we've designed a sleek and modern website using React and Tailwind CSS. Users can explore our range of scooters, ensuring that visitors can quickly find the perfect scooter for their needs.",
-    live:"https://64dfa5ef29e9b632b42d18ab--grand-truffle-0ee0d0.netlify.app/",
-    githublink:"https://github.com/ess-maker/E_Scooter",
-    img:assets.scooter,
-  },
-
+    tech_work_with:["•Tailwend" ,"•React" , "Git" , 'Figma' ]
+  }
 ]
-

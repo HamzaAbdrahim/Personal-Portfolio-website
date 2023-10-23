@@ -38,6 +38,11 @@ const Projects = (prop) => {
             <div className="p-4 mx-auto  text-center lg:p-20 lg:text-left">
               <h1 className={`${styles.Subtitle}`}>{project.titel}</h1>
               <p className={`${styles.Body1} my-6 max-w-6xl lowercase`}>{project.discrption}</p>
+              <div className={`my-10 ${styles.flexitems} gap-4`} >
+                {project.tech_work_with.map((item) => (
+                  <span className='rounded-xl bg-[#e5e7eb] px-5 py-1 text-[#4B5563] font-Inter text-lg not-italic font-medium leading-5'>{item}</span>
+                ))}
+              </div>
               <div className="inline-flex gap-4">
                 <a  target="_blank" className = {`${styles.flexCenter} p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`}  rel="noopener noreferrer"  href={project.live}>
                   <img src={assets.live} alt="live" />

@@ -37,7 +37,8 @@ const Hero = () => {
             who is always eager to explore and adopt new technologies.
           </p>
           <div className="inline-flex gap-4">
-            <Inbutton name="Download CV" link = "https://drive.google.com/file/d/1ZmHXQNaj1EGGRDQUP_x-o4Bo8walAF1Q/view?usp=sharing" />
+            <Inbutton name="Download CV" 
+            link = "https://drive.google.com/file/d/1Z96tZvmCF6sL7BmNwIbhwITOiQul49em/view?usp=sharing" />
             <Inbutton name="See My Project" onClick={handleProjectClick} styles = "!bg-transparent !text-xl !font-bold !text-Gray_Dark_Default underline" />
           </div>
         </div>
