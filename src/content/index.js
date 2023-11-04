@@ -89,7 +89,7 @@ export const projects = [
   },
   {
     titel: "Flower Delivery",
-    discrption: "Our flower delivery website uses React, Tailwind CSS, and the Context API for seamless browsing, customization, and secure ordering of a wide variety of flowers. With social media integration and excellent customer support, we make celebrating special moments with beautiful flowers effortless.",
+    discrption: "Our flower delivery website is user-friendly platform that offers an online shopping experience ",
     live:"https://64e1c0c6a489b63f3d34cf2f--lustrous-nougat-51ca11.netlify.app/",
     githublink:"https://github.com/ess-maker/Flower-Delivery-website-",
     img:assets.flower,

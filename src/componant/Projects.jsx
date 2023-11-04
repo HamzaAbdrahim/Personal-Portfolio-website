@@ -24,21 +24,19 @@ const Projects = (prop) => {
         Projects
       </h1>
       <p className={`${styles.heading2} mb-12`}>Some of the noteworthy projects I have built:</p>
-      <div id='projects' className="grid grid-cols-1 gap-12" ref={ref}>
+      <div id='projects' className="grid  grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-8" ref={ref}>
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`project-item w-fit flex flex-col  ${index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"} cursor-pointer transform translate-x-0 duration-700 ease-in-out mx-auto shadow-xl rounded-xl items-start justify-center`}
+            className={`project-item gap-8  cursor-pointer transform translate-x-0 duration-700 ease-in-out p-5  shadow-xl rounded-xl `}
           >
-            <div className="p-4 lg:p-12 select-none cursor-pointer h-full w-full hover:-translate-y-5 duration-700 ease-in-out">
-              <a target='_blank' href={project.live}>
+              <a target='_blank' href={project.live} className=''>
               <img src={project.img} className='rounded-xl object-contain' alt="img" />
               </a>
-            </div>
-            <div className="p-4 mx-auto  text-center lg:p-20 lg:text-left">
+            <div className="mx-auto mt-5  text-center lg:text-left">
               <h1 className={`${styles.Subtitle}`}>{project.titel}</h1>
               <p className={`${styles.Body1} my-6 max-w-6xl lowercase`}>{project.discrption}</p>
-              <div className={`my-10 ${styles.flexitems} gap-4`} >
+              <div className={`my-10 ${styles.flexitems} gap-4 flex-wrap`} >
                 {project.tech_work_with.map((item) => (
                   <span className='rounded-xl bg-[#e5e7eb] px-5 py-1 text-[#4B5563] font-Inter text-lg not-italic font-medium leading-5'>{item}</span>
                 ))}
