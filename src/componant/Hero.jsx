@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import styles from '../style';
 import Inbutton from './Inbutton';
 import assets from '../assets/imges';
+import Loding from './Loding';
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,7 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <>
+    <Suspense fallback={<Loding />}>
       <div
       id='home'
         className={`${styles.flexBetween} px-14 py-10 lg:py-24 lg:px-20 flex-col-reverse gap-20 lg:flex-row`}
@@ -51,7 +52,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </>
+    </Suspense>
   );
 };
 

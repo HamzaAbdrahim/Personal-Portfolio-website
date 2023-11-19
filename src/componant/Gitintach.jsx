@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , Suspense } from 'react';
 import { useInView } from 'react-intersection-observer';
 import styles from '../style';
 import assets from "../assets/imges"
+import Loding from './Loding';
 
 const Gitintach = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -38,9 +39,9 @@ const Gitintach = () => {
   };
 
   return (
+    <Suspense fallback={<Loding />}>
     <div id='contact' className={`py-5 md:py-10 text-center ${isLoaded ? 'transition-opacity duration-1000 delay-200  ease-in-out' : 'opacity-0'}`}>
-      <h1 className={`${styles.heading3} px-5 py-1.5 bg-[#E5E7EB] rounded-xl mb-4 w-fit mx-auto text-Gray_600`}>Get in touch</h1>
-      <p className={`${styles.Subtitle} mb-12 max-w-xl px-4 mx-auto`}>What’s next? Feel free to reach out to me if you're looking to hire a developer, have a query, or simply want to connect.</p>
+      <h1 className={`${styles.heading3} px-5 py-1.5 bg-[#E5E7EB] rounded-xl mb-4 w-fit mx-auto text-Gray_600 capitalize`}>Contact Information</h1>
       <div ref={ref} className={`grid grid-cols-1 place-items-center my-12`}>
         <div className='inline-flex gap-5 mb-8'>
           <img src={assets.mail} onClick = {handleSendEmail} alt="mail" className='cursor-pointer' />
@@ -58,6 +59,7 @@ const Gitintach = () => {
       {showNumberNotification && 
         <p className="bg-[#10B981] py-2 px-5 rounded-lg text-2xl capitalize text-white fixed left-1/2 top-5 transform -translate-x-1/2">Number copied!</p>}
     </div>
+    </Suspense>
   );
 };
 

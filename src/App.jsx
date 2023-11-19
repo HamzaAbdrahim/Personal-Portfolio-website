@@ -6,6 +6,7 @@ import Projects from "./componant/Projects"
 import Gitintach from "./componant/Gitintach"
 import Footer from "./componant/Footer"
 import About from "./componant/About"
+import CotectMe from "./componant/contect_Me/CotectMe"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
   <Skills />
   <Projects />
   <Gitintach />
+  <CotectMe />
   <Footer />
   </div>
 </div>

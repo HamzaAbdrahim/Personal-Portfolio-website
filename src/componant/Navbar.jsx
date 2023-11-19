@@ -9,7 +9,7 @@ import React, { useRef } from "react";
 const Navbar = () => {
   const [toogol, settoggol] = useState(false);
   const [transtion, settranstion] = useState(false);
-  const [activeSection, setActiveSection] = useState(""); // Added state for active section
+  const [activeSection, setActiveSection] = useState("home"); // Added state for active section
   const hamza = `${toogol ? "" : "<HaMza />"}`;
 
   function handelmenu() {
@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`lg:px-8 ${styles.flexBetween}`}
+      className={`lg:px-8  ${styles.flexBetween}`}
       style={{
         transition: "opacity 0.5s ease-in-out", 
         opacity: transtion ? 1 : 0, 

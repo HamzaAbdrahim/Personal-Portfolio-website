@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { Suspense, useEffect, useRef } from 'react';
 import { projects } from '../content';
 import styles from '../style';
 import { useInView } from 'react-intersection-observer';
 import assets from '../assets/imges';
+import Loding from './Loding';
 
 const Projects = (prop) => {
   const [ref, inView] = useInView({
@@ -19,6 +20,7 @@ const Projects = (prop) => {
   }, [inView]);
 
   return (
+    <Suspense fallback={<Loding />}>
     <div id="projectSection"  className={`p-5 lg:py-10 lg:px-20 text-center `}>
       <h1 className={`${styles.heading3} px-5 py-1.5 bg-[#E5E7EB] rounded-xl mb-4 w-fit mx-auto text-Gray_600`}>
         Projects
@@ -37,8 +39,8 @@ const Projects = (prop) => {
               <h1 className={`${styles.Subtitle}`}>{project.titel}</h1>
               <p className={`${styles.Body1} my-6 max-w-6xl lowercase`}>{project.discrption}</p>
               <div className={`my-10 ${styles.flexitems} gap-4 flex-wrap`} >
-                {project.tech_work_with.map((item) => (
-                  <span className='rounded-xl bg-[#e5e7eb] px-5 py-1 text-[#4B5563] font-Inter text-lg not-italic font-medium leading-5'>{item}</span>
+                {project.tech_work_with.map((item , index) => (
+                  <span key={index} className='rounded-xl bg-[#e5e7eb] px-5 py-1 text-[#4B5563] font-Inter text-lg not-italic font-medium leading-5'>{item}</span>
                 ))}
               </div>
               <div className="inline-flex gap-4">
@@ -54,6 +56,7 @@ const Projects = (prop) => {
         ))}
       </div>
     </div>
+    </Suspense>
   );
 };
 

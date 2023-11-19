@@ -1,7 +1,8 @@
 import assets from "../assets/imges";
 import styles from "../style";
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import Loding from "./Loding";
 
 const About = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,6 +17,7 @@ const About = () => {
   }, [inView]);
 
   return (
+    <Suspense fallback={<Loding />}>
     <div ref={ref} id="about" className={`p-5 lg:py-24 lg:px-20 text-center ${isLoaded ? 'transition-transform duration-1000 delay-200 transform translate-x-0' : 'transform -translate-x-full'}`}>
       <h1 className={`${styles.heading3} px-5 py-1.5 !text-[1.400rem] bg-[#E5E7EB] rounded-xl mb-4 w-fit mx-auto text-Gray_600`}>About me</h1>
       <div className="grid grid-cols-1 items-center justify-center lg:grid-cols-2">
@@ -30,6 +32,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 };
 

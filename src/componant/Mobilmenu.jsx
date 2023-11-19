@@ -3,6 +3,8 @@ import assets from "../assets/imges"
 import { navlinks } from "../content"
 import styles from "../style"
 import Inbutton from "./Inbutton"
+import useClickOutside from "../hooks/useclickoutside"
+
 
 const Mobilmenu = (prop) => {
     const [activeSection, setActiveSection] = useState("")
@@ -11,11 +13,13 @@ const Mobilmenu = (prop) => {
         setActiveSection(sectionId);
       };
 
+      const Ref = useClickOutside(prop.handelclose)
+
     const hamza = `<HaMza />`
   return (
     <>
     {prop.open && <div className="fixed z-[50] h-screen w-screen bg-Gray_900 opacity-95 lg:hidden top-0 left-0"></div>}
-        <div className={`fixed z-[60] ${prop.open ? "right-0 opacity-100" : "-right-[80rem] opacity-0"} h-screen w-1/2 top-0  bg-white shadow-2xl duration-500 ease-in xl:hidden`}>
+        <div ref={Ref} className={`fixed z-[60] ${prop.open ? "right-0 opacity-100" : "-right-[80rem] opacity-0"} h-screen w-1/2 top-0  bg-white shadow-2xl duration-500 ease-in xl:hidden`}>
             <div className={`${styles.flexBetween} p-4`}>
                 <h1 className="text-2xl not-italic font-bold leading-9 tracking-[-0.0375rem] font-Inter text-Gray_900 ">{hamza}</h1>
                 <img src={assets.close} onClick={prop.handelclose} alt="close" className="h-10 w-10 cursor-pointer" />

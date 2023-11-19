@@ -4,7 +4,8 @@ import styles from "../style"
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useState , useEffect } from "react";
+import { useState , useEffect, Suspense } from "react";
+import Loding from "./Loding";
 
 
 const Skills = () => {
@@ -46,6 +47,7 @@ const Skills = () => {
     ],
   };
   return (
+    <Suspense fallback={<Loding />}>
     <div id="techstack" className={`p-5 lg:py-24 lg:px-20 text-center `}>
       <h1 className={`${styles.heading3} px-5 py-1.5 bg-[#E5E7EB] rounded-xl mb-4 w-fit mx-auto text-Gray_600`}>My Tech Stack</h1>
       <p className={`${styles.heading2} `}> Technologies I’ve been working with recently</p>
@@ -62,6 +64,7 @@ const Skills = () => {
       </div>
 
     </div>
+    </Suspense>
   )
 }
 
