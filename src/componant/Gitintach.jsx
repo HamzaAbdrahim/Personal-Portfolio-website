@@ -45,12 +45,12 @@ const Gitintach = () => {
       <div ref={ref} className={`grid grid-cols-1 place-items-center my-12`}>
         <div className='inline-flex gap-5 mb-8'>
           <img src={assets.mail} onClick = {handleSendEmail} alt="mail" className='cursor-pointer' />
-          <h1 className={`${styles.heading2} !font-semibold`}>essh4014@gmail.com</h1>
+          <h1 className={`${styles.heading2} !font-semibold dark:text-white`}>essh4014@gmail.com</h1>
           <img src={assets.copy} alt="copy" className='cursor-pointer' onClick={handleCopyEmail} />
         </div>
         <div className='inline-flex gap-5 mb-4'>
           <img src={assets.call} alt="mail" className='cursor-pointer' onClick={handleCopyNumber} />
-          <h1 className={`${styles.heading2} !font-semibold`}>+213 669 114 950</h1>
+          <h1 className={`${styles.heading2} !font-semibold dark:text-white`}>+213 669 114 950</h1>
           <img src={assets.copy} alt="copy" className='cursor-pointer' onClick={handleCopyNumber} />
         </div>
       </div>

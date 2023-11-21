@@ -10,9 +10,9 @@ import CotectMe from "./componant/contect_Me/CotectMe"
 
 function App() {
   return (
-<div className="overflow-hidden">
+<div className={`dark:bg-gray-950 overflow-hidden`}>
   <div className="p-10 lg:px-20 py-4 overflow-hidden">
-  <Navbar />
+  <Navbar  />
   </div>
   <div>
   <Hero />

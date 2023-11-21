@@ -4,6 +4,8 @@ import styles from '../style';
 import { useInView } from 'react-intersection-observer';
 import assets from '../assets/imges';
 import Loding from './Loding';
+import Sectiontitel from "./commen/Sectiontitel";
+
 
 const Projects = (prop) => {
   const [ref, inView] = useInView({
@@ -22,10 +24,8 @@ const Projects = (prop) => {
   return (
     <Suspense fallback={<Loding />}>
     <div id="projectSection"  className={`p-5 lg:py-10 lg:px-20 text-center `}>
-      <h1 className={`${styles.heading3} px-5 py-1.5 bg-[#E5E7EB] rounded-xl mb-4 w-fit mx-auto text-Gray_600`}>
-        Projects
-      </h1>
-      <p className={`${styles.heading2} mb-12`}>Some of the noteworthy projects I have built:</p>
+      <Sectiontitel titel='Projects' />
+      <p className={`${styles.heading2} dark:text-white mb-12`}>Some of the noteworthy projects I have built:</p>
       <div id='projects' className="grid  grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-8" ref={ref}>
         {projects.map((project, index) => (
           <div
@@ -36,11 +36,11 @@ const Projects = (prop) => {
               <img src={project.img} className='rounded-xl object-contain' alt="img" />
               </a>
             <div className="mx-auto mt-5  text-center lg:text-left">
-              <h1 className={`${styles.Subtitle}`}>{project.titel}</h1>
-              <p className={`${styles.Body1} my-6 max-w-6xl lowercase`}>{project.discrption}</p>
+              <h1 className={`dark:text-white ${styles.Subtitle}`}>{project.titel}</h1>
+              <p className={`dark:text-white  capitalize  ${styles.Body1} my-6 max-w-6xl`}>{project.discrption}</p>
               <div className={`my-10 ${styles.flexitems} gap-4 flex-wrap`} >
                 {project.tech_work_with.map((item , index) => (
-                  <span key={index} className='rounded-xl bg-[#e5e7eb] px-5 py-1 text-[#4B5563] font-Inter text-lg not-italic font-medium leading-5'>{item}</span>
+                  <span key={index} className='rounded-xl bg-[#e5e7eb] dark:bg-gray_dark_200 dark:text-white px-5 py-1 text-[#4B5563] font-Inter text-lg not-italic font-medium leading-5'>{item}</span>
                 ))}
               </div>
               <div className="inline-flex gap-4">

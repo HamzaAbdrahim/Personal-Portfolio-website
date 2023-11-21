@@ -6,6 +6,8 @@ import Handelform from "./Handelform";
 import Alart from "../Alart";
 import React, { useState , useEffect, Suspense } from 'react';
 import Loding from "../Loding";
+import { useInView } from 'react-intersection-observer';
+
 
 
 const CotectMe = () => {
@@ -23,12 +25,23 @@ const CotectMe = () => {
         setshowalrt(!showalrt)
         window.location.reload()
       }
+
+      const [isLoaded, setIsLoaded] = useState(false);
+      const { ref, inView } = useInView({
+        triggerOnce: true, 
+      });
+    
+      useEffect(() => {
+        if (inView) {
+          setIsLoaded(true);
+        }
+      }, [inView]);
   return (
     <Suspense fallback={<Loding />}>
     <Alart toggolshowalrt = {toggolshowalrt} showalrt = {showalrt} />
-    <div className="bg-gray-200 w-full p-5 lg:py-24 lg:px-20 min-h-screen ">
-    <h1 className={`${styles.heading3} mb-4 text-center  text-Gray_600`}>Get in touch</h1>
-    <p className={`${styles.Subtitle} text-center max-w-2xl mx-auto mb-4 `}>What’s next? Feel free to reach out to me if you're looking to hire a developer, have a query, or simply want to connect.</p>
+    <div ref={ref} className={`${isLoaded ? 'transition-transform duration-1000 delay-200 transform translate-x-0' : 'transform -translate-x-full'} bg-gray-200 dark:bg-gray_dark_50  w-full p-5 lg:py-24 lg:px-20 min-h-screen`}>
+    <h1 className={`${styles.heading3} dark:text-white  mb-4 text-center  text-Gray_600`}>Get in touch</h1>
+    <p className={`${styles.Subtitle} dark:text-white  text-center max-w-2xl mx-auto mb-4 `}>What’s next? Feel free to reach out to me if you're looking to hire a developer, have a query, or simply want to connect.</p>
     <div className="lg:flex items-center space-x-16">
     <div className="min-w-5/6 md:w-3/4 lg:w-2/3 xl:w-[500px] 2xl:w-[550px] mt-8 mx-auto px-16 py-8 rounded-lg">
     <form onSubmit={formik_contectus.handleSubmit} className="space-y-5">

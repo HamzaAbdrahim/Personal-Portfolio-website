@@ -4,12 +4,13 @@ import { navlinks } from "../content";
 import styles from "../style";
 import Mobilmenu from "./Mobilmenu";
 import React, { useRef } from "react";
+import Toggle_switch from "./Toggle_switch";
 
 
-const Navbar = () => {
+const Navbar = ({}) => {
   const [toogol, settoggol] = useState(false);
   const [transtion, settranstion] = useState(false);
-  const [activeSection, setActiveSection] = useState("home"); // Added state for active section
+  const [activeSection, setActiveSection] = useState("home");
   const hamza = `${toogol ? "" : "<HaMza />"}`;
 
   function handelmenu() {
@@ -37,20 +38,35 @@ const Navbar = () => {
     settoggol(false);
   };
 
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.documentElement.setAttribute("class", localTheme);
+  }, [theme]);
+
 
   return (
     <nav
-      className={`lg:px-8  ${styles.flexBetween}`}
+      className={`lg:px-8 dark ${styles.flexBetween}  bg-transparent`}
       style={{
         transition: "opacity 0.5s ease-in-out", 
         opacity: transtion ? 1 : 0, 
       }}
     >
-      <h1 className="text-3xl not-italic font-bold leading-9 tracking-[-0.0375rem] font-Inter text-Gray_900">
-        {hamza}
-      </h1>
-      <div className="lg:flex items-center hidden">
-        <ul className="inline-flex gap-6 py-[0.38rem] mr-6">
+          <h1 className={`text-3xl not-italic font-bold leading-9 tracking-[-0.0375rem] font-Inter  ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{hamza}</h1>
+        <ul className="hidden xl:inline-flex gap-6 py-[0.38rem] mr-6">
           {navlinks.map((nav) => (
             <li
               key={nav.id}
@@ -62,10 +78,12 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="inline-flex gap-4 pl-6 border-l border-Gray_100 border-solid">
+      <div className="lg:flex items-center hidden">
+        <Toggle_switch theme = {theme} onClick={handleToggle} />
+        <div className="inline-flex gap-4 pl-6 ml-6 border-l border-Gray_100 border-solid">
           <div className="inline-flex gap-4">
             <a target="_blank"  className = {`p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://github.com/ess-maker"><img src={assets.github} alt="github" className="w-4 h-4" /></a>
-        <a target="_blank"  className = {`p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://www.linkedin.com/in/hamza-abd-rahim-42bb93267/"><img src={assets.linkedin} alt="linkedin" className="w-4 h-4" /></a>
+        <a target="_blank"  className = {`p-3  d duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://www.linkedin.com/in/hamza-abd-rahim-42bb93267/"><img src={assets.linkedin} alt="linkedin" className="w-4 h-4" /></a>
           </div>
         </div>
       </div>
@@ -75,7 +93,7 @@ const Navbar = () => {
         alt="menu"
         className="h-10 w-10 lg:hidden cursor-pointer"
       />
-      <Mobilmenu open={toogol} handelclose={handelclose} />
+      <Mobilmenu open={toogol} handeltheme = {handleToggle} handelclose={handelclose} />
     </nav>
   );
 };

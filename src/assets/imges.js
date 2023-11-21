@@ -24,6 +24,9 @@ import Picture from "./Picture.png"
 import sass from "./sass.svg"
 import typescript from "./typescript.svg"
 import main_img from "./main_img.png"
+import lightmodeimg from "./lightmodeimg.svg"
+import darkmodeimg from "./darkmodeimg.svg"
+
 
 
 
@@ -57,6 +60,8 @@ scooter,
 flower,
 sass,
 typescript,
-main_img
+main_img,
+lightmodeimg,
+darkmodeimg
 }
 export default assets;

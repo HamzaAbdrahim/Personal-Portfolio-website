@@ -11,6 +11,7 @@
       transform: translateX(0);
     }
   }
+
   
   .fade-in {
     animation: fade-in 0.5s ease-out;
@@ -19,3 +20,7 @@
   html {
     scroll-behavior: smooth;
   }
+
+  input:checked ~ .dot {
+    transform: translateX(100%);
+    }

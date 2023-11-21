@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className={`${styles.flexBetween} px-10 py-4`}>
         <div>
-    <h1 className="text-3xl not-italic font-bold leading-9 tracking-[-0.0375rem] font-Inter text-Gray_900 ">{hamza}</h1>
+    <h1 className="text-3xl not-italic font-bold leading-9 tracking-[-0.0375rem] font-Inter dark:text-white text-Gray_900 ">{hamza}</h1>
         </div>
     <div className="inline-flex gap-4">
         <a target="_blank"  className = {`p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://github.com/ess-maker"><img src={assets.github} alt="github" className="w-6 h-6" /></a>
