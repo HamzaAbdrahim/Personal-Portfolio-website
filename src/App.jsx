@@ -3,7 +3,6 @@ import Navbar from "./componant/Navbar"
 import React from "react"
 import Skills from "./componant/Skills"
 import Projects from "./componant/Projects"
-import Gitintach from "./componant/Gitintach"
 import Footer from "./componant/Footer"
 import About from "./componant/About"
 import CotectMe from "./componant/contect_Me/CotectMe"
@@ -19,7 +18,6 @@ function App() {
   <About />
   <Skills />
   <Projects />
-  <Gitintach />
   <CotectMe />
   <Footer />
   </div>

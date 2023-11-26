@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import assets from "../assets/imges";
 import { navlinks } from "../content";
 import styles from "../style";
 import Mobilmenu from "./Mobilmenu";
 import React, { useRef } from "react";
 import Toggle_switch from "./Toggle_switch";
+import Loding from "./Loding";
+import Social_media_links from "./Social_media_links";
 
 
 const Navbar = ({}) => {
@@ -58,6 +60,7 @@ const Navbar = ({}) => {
 
 
   return (
+    <Suspense fallback={<Loding />}>
     <nav
       className={`lg:px-8 dark ${styles.flexBetween}  bg-transparent`}
       style={{
@@ -80,12 +83,7 @@ const Navbar = ({}) => {
         </ul>
       <div className="lg:flex items-center hidden">
         <Toggle_switch theme = {theme} onClick={handleToggle} />
-        <div className="inline-flex gap-4 pl-6 ml-6 border-l border-Gray_100 border-solid">
-          <div className="inline-flex gap-4">
-            <a target="_blank"  className = {`p-3 duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://github.com/ess-maker"><img src={assets.github} alt="github" className="w-4 h-4" /></a>
-        <a target="_blank"  className = {`p-3  d duration-200 ease-linear hover:scale-125 rounded-full bg-Gray_100 shadow-xl`} href="https://www.linkedin.com/in/hamza-abd-rahim-42bb93267/"><img src={assets.linkedin} alt="linkedin" className="w-4 h-4" /></a>
-          </div>
-        </div>
+
       </div>
       <img
         src={assets.menu}
@@ -95,6 +93,8 @@ const Navbar = ({}) => {
       />
       <Mobilmenu open={toogol} handeltheme = {handleToggle} handelclose={handelclose} />
     </nav>
+    <Social_media_links />
+    </Suspense>
   );
 };
 
