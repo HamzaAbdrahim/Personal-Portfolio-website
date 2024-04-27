@@ -81,7 +81,7 @@ export const skills = [
 export const projects = [
   {
     titel: "AVE",
-    discrption: "lothes Shopping Website is user-friendly platform that offers an online shopping experience for fashion enthusiasts.",
+    discrption: "AVE offers a seamless online shopping experience for fashion enthusiasts. Built with Bootstrap, React, Typescript, and Axios, it's user-friendly and stylish.",
     live:"https://ave-react.vercel.app/",
     githublink:"https://github.com/HamzaAbdrahim/ave-react",
     img:"https://i.ibb.co/n7PMZRq/ave-img.png",
@@ -89,7 +89,7 @@ export const projects = [
   },
   {
     titel: "WOODUBEND",
-    discrption: "lothes Shopping Website is user-friendly platform that offers an online shopping experience for fashion enthusiasts.",
+    discrption: "WOODUBEND is a sleek platform for trendy apparel shopping. Crafted with Html, Css, Js, and Bootstrap, it ensures a smooth browsing experience.",
     live:"https://abdrahim19.github.io/new_clone/",
     githublink:"https://github.com/HamzaAbdrahim",
     img:"https://i.ibb.co/kXRqM3h/Capture-d-cran-2024-04-27-171905.png",
@@ -97,7 +97,7 @@ export const projects = [
   },
   {
     titel: "Blog Landing Page",
-    discrption: "lothes Shopping Website is user-friendly platform that offers an online shopping experience for fashion enthusiasts.",
+    discrption: "The Blog Landing Page is a visually appealing platform for captivating content. Built with Html, Css, and Js, it offers an engaging space for sharing stories and insights.",
     live:"https://abdrahim19.github.io/blog_site/",
     githublink:"https://github.com/HamzaAbdrahim/blog_site",
     img:"https://i.ibb.co/PwhLmPV/Capture-d-cran-2024-04-27-171323.png",
