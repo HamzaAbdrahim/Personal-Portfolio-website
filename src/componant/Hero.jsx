@@ -21,7 +21,8 @@ const Hero = () => {
     <Suspense fallback={<Loding />}>
       <div
       id='home'
-        className={`${styles.flexBetween} px-14 py-10 lg:py-24 mt-10 lg:mt-0 lg:px-20 flex-col-reverse gap-20 lg:flex-row`}
+        className={`${styles.flexBetween} px-14 py-10 lg:py-24 mt-10 lg:mt-0 
+        lg:px-20 flex-col-reverse gap-20 lg:flex-row`}
         style={{
           opacity: isLoaded ? 1 : 0,
           transform: `translateY(${isLoaded ? '0' : '20px'})`,
@@ -30,7 +31,7 @@ const Hero = () => {
       >
         <div>
           <h1 className={`${styles.heading1} dark:text-white mb-2`}>
-            Hi 👋, I'm <span className="underline">Hamza</span>
+            Hi👋, I'm <span className="underline">Hamza</span>
           </h1>
           <p className={`${styles.Body1} text-Gray_600 dark:text-white max-w-3xl my-10`}>
             Coding user interfaces has never been just a job for me; instead, it's a constant source

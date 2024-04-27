@@ -5,7 +5,7 @@ const Alart = ({toggolshowalrt , showalrt}) => {
   const Ref = useClickOutside(toggolshowalrt)
   return (
     <>
-    {showalrt && <div x-show="showModal" class="fixed inset-0 transition-opacity" aria-hidden="true">
+    {showalrt && <div x-show="showModal" class="fixed inset-0 z-40 transition-opacity" aria-hidden="true">
     <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
   </div>}
     {showalrt && <div
@@ -14,7 +14,7 @@ const Alart = ({toggolshowalrt , showalrt}) => {
     data-te-animation="[fade-in_1s_ease-in-out]"
     ref={Ref}
      className={` flex  rounded-lg 
-     items-center justify-center bg-gray-100 ${showalrt? 'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' :''}`}>
+     items-center justify-center bg-gray-100 ${showalrt? 'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50' :''}`}>
   <div className="rounded-lg bg-gray-50 px-16 py-14">
     <div className="flex justify-center">
       <div className="rounded-full bg-green-200 p-6">
