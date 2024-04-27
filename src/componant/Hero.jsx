@@ -6,6 +6,7 @@ import Loding from './Loding';
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const CvLink = "https://drive.google.com/file/d/1XATYUtxfa5ST7B5BbQx0VYrahhajYLfi/view?usp=sharing";
 
   useEffect(() => {
     setIsLoaded(true);
@@ -39,9 +40,9 @@ const Hero = () => {
           </p>
           <div className="inline-flex gap-4">
             <Inbutton name="Download CV" 
-            link = "https://drive.google.com/file/d/1Z96tZvmCF6sL7BmNwIbhwITOiQul49em/view?usp=sharing" />
+            link = {CvLink} />
             <button onClick={handleProjectClick} className='!bg-transparent !text-xl !font-bold 
-             underline duration-200 ease-in-out hover:scale-125 active:bg-black bg-Gray_900'>
+             underline duration-200 ease-in-out hover:scale-125 active:bg-black dark:text-white bg-Gray_900'>
             See My Project
             </button>
           </div>
