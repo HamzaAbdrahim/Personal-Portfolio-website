@@ -80,27 +80,28 @@ export const skills = [
 
 export const projects = [
   {
-    titel: "Clothes Shopping Website",
+    titel: "AVE",
     discrption: "lothes Shopping Website is user-friendly platform that offers an online shopping experience for fashion enthusiasts.",
-    live:"https://ecommerchijab.netlify.app/",
-    githublink:"https://github.com/ess-maker/Clothes-Shopping-Website",
-    img:assets.main_img,
-    tech_work_with:["Scss" ,"React" , "Typescript" , "Axois" , 'ReduxTolkit']
+    live:"https://ave-react.vercel.app/",
+    githublink:"https://github.com/HamzaAbdrahim/ave-react",
+    img:"https://i.ibb.co/n7PMZRq/ave-img.png",
+    tech_work_with:["Bootstrap" ,"React" , "Typescript" , "Axois"]
   },
   {
-    titel: "Flower Delivery",
-    discrption: "Our flower delivery website is user-friendly platform that offers an online shopping experience ",
-    live:"https://64e1c0c6a489b63f3d34cf2f--lustrous-nougat-51ca11.netlify.app/",
-    githublink:"https://github.com/ess-maker/Flower-Delivery-website-",
-    img:assets.flower,
-    tech_work_with:["Tailwend" ,"React" , "Git" , 'Figma' ]
+    titel: "WOODUBEND",
+    discrption: "lothes Shopping Website is user-friendly platform that offers an online shopping experience for fashion enthusiasts.",
+    live:"https://abdrahim19.github.io/new_clone/",
+    githublink:"https://github.com/HamzaAbdrahim",
+    img:"https://i.ibb.co/kXRqM3h/Capture-d-cran-2024-04-27-171905.png",
+    tech_work_with:["Html" ,"Css" , "Js" , "Bootstrap"]
   },
   {
-    titel: "Dessert Store",
-  discrption: "Build a website for a dessert store that showcase the desserts they sell. Include a login and signup page and handle validation on the front end. ",
-    live:"https://storedessert.netlify.app/",
-    githublink:"https://github.com/ess-maker/Desseret_store",
-    img:assets.Picture,
-    tech_work_with:["•Tailwend" ,"•React" , "Git" , 'Figma' ]
-  }
+    titel: "Blog Landing Page",
+    discrption: "lothes Shopping Website is user-friendly platform that offers an online shopping experience for fashion enthusiasts.",
+    live:"https://abdrahim19.github.io/blog_site/",
+    githublink:"https://github.com/HamzaAbdrahim/blog_site",
+    img:"https://i.ibb.co/PwhLmPV/Capture-d-cran-2024-04-27-171323.png",
+    tech_work_with:["Html" ,"Css" , "Js"]
+  },
 ]
+
