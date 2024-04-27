@@ -21,8 +21,7 @@ const Hero = () => {
     <Suspense fallback={<Loding />}>
       <div
       id='home'
-        className={`${styles.flexBetween} px-14 py-10 lg:py-24 mt-10 lg:mt-0 
-        lg:px-20 flex-col-reverse gap-20 lg:flex-row`}
+        className={` min-h-[90vh] gap-10 container mt-10 lg:mt-0 flex flex-col-reverse xl:flex-row justify-center items-center xl:justify-between lg:flex-row`}
         style={{
           opacity: isLoaded ? 1 : 0,
           transform: `translateY(${isLoaded ? '0' : '20px'})`,
@@ -41,7 +40,10 @@ const Hero = () => {
           <div className="inline-flex gap-4">
             <Inbutton name="Download CV" 
             link = "https://drive.google.com/file/d/1Z96tZvmCF6sL7BmNwIbhwITOiQul49em/view?usp=sharing" />
-            <Inbutton name="See My Project" onClick={handleProjectClick} styles = "!bg-transparent !text-xl !font-bold text-Gray_Dark_Default underline" />
+            <button onClick={handleProjectClick} className='!bg-transparent !text-xl !font-bold 
+             underline duration-200 ease-in-out hover:scale-125 active:bg-black bg-Gray_900'>
+            See My Project
+            </button>
           </div>
         </div>
         <div className="w-72 h-80 dark:bg-gray_dark_200  bg-[#E5E7EB] relative">

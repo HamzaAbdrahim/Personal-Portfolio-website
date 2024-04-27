@@ -62,7 +62,7 @@ const Navbar = ({}) => {
   return (
     <Suspense fallback={<Loding />}>
     <nav
-      className={`lg:px-8 dark ${styles.flexBetween}  bg-transparent`}
+      className={`lg:px-8 dark ${styles.flexBetween} container  bg-transparent`}
       style={{
         transition: "opacity 0.5s ease-in-out", 
         opacity: transtion ? 1 : 0, 

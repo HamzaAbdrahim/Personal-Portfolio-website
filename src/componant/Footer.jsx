@@ -5,7 +5,7 @@ const hamza = `<HaMza />`
 
 const Footer = () => {
   return (
-    <div className={`${styles.flexBetween} px-10 py-4`}>
+    <div className={`${styles.flexBetween} px-10 py-4 container`}>
         <div>
     <h1 className="text-3xl not-italic font-bold leading-9 tracking-[-0.0375rem] font-Inter dark:text-white text-Gray_900 ">{hamza}</h1>
         </div>

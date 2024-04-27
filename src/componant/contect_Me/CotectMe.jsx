@@ -39,11 +39,15 @@ const CotectMe = () => {
   return (
     <Suspense fallback={<Loding />}>
     <Alart toggolshowalrt = {toggolshowalrt} showalrt = {showalrt} />
-    <div ref={ref} className={`${isLoaded ? 'transition-transform duration-1000 delay-200 transform translate-x-0' : 'transform -translate-x-full'} bg-gray-200 dark:bg-gray_dark_50  w-full p-5 lg:py-24 lg:px-20 min-h-screen`}>
+    <div ref={ref} className={`${isLoaded ? 'transition-transform duration-1000 delay-200 transform translate-x-0' : 
+    'transform -translate-x-full'} bg-gray-200 dark:bg-gray_dark_50  w-full p-5 lg:py-24 lg:px-20 
+    min-h-screen`}>
+      <div className="container mb-8">
     <h1 className={`${styles.heading3} dark:text-white  mb-4 text-center  text-Gray_600`}>Get in touch</h1>
-    <p className={`${styles.Subtitle} dark:text-white  text-center max-w-2xl mx-auto mb-4 `}>What’s next? Feel free to reach out to me if you're looking to hire a developer, have a query, or simply want to connect.</p>
-    <div className="lg:flex items-center space-x-16">
-    <div className="min-w-5/6 md:w-3/4 lg:w-2/3 xl:w-[500px] 2xl:w-[550px] mt-8 mx-auto px-16 py-8 rounded-lg">
+    <p className={`${styles.Subtitle} dark:text-white  text-center max-w-2xl mx-auto`}>What’s next? Feel free to reach out to me if you're looking to hire a developer, have a query, or simply want to connect.</p>
+      </div>
+    <div className="container grid grid-cols-1 items-center  xl:grid-cols-2">
+    <div className="mt-8 rounded-lg order-2 xl:order-1">
     <form onSubmit={formik_contectus.handleSubmit} className="space-y-5">
     <Inputfiled   value={formik_contectus.values.name} onChange={formik_contectus.handleChange} name='name' 
     error={formik_contectus.touched.name && formik_contectus.errors.name ? formik_contectus.errors.name : ''} label='Full Name' placeholder="John Doe"  />
@@ -54,7 +58,7 @@ const CotectMe = () => {
     <Button apistate={Isloding} value='Submit' onClick={formik_contectus.handleSubmit} type='submit'  />
     </form>
     </div>
-    <div className="hidden lg:flex items-center justify-center">
+    <div className="flex items-center justify-center order-1 xl:order-2">
      <svg className="text-blue-600 w-full" 
       xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="582.544228"
        height="350.249375" viewBox="0 0 832.20604 500.35625" xmlnsXlink="http://www.w3.org/1999/xlink">

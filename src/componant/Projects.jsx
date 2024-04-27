@@ -23,7 +23,7 @@ const Projects = (prop) => {
 
   return (
     <Suspense fallback={<Loding />}>
-    <div id="projectSection"  className={`p-5 lg:py-10 lg:px-20 text-center `}>
+    <div id="projectSection"  className={`p-5 lg:py-10 container lg:px-20 text-center `}>
       <Sectiontitel titel='Projects' />
       <p className={`${styles.heading2} dark:text-white mb-12`}>Some of the noteworthy projects I have built:</p>
       <div id='projects' className="grid  grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-8" ref={ref}>
